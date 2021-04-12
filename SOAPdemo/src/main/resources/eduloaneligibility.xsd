@@ -1,0 +1,26 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.marlabs.com/spring/saop/eduloaneligibility"
+	xmlns:tns="http://www.marlabs.com/spring/saop/eduloaneligibility"
+	elementFormDefault="qualified">
+	<xsd:element name="UserRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="userName" type="xsd:string" />
+				<xsd:element name="userage" type="xsd:int" />
+				<xsd:element name="userannualIncome" type="xsd:long" />
+				<xsd:element name="userieltsScore" type="xsd:int" />
+				<xsd:element name="useremploymentMode" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Acknowledgement">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="isEligible" type="xsd:boolean" />
+				<xsd:element name="approvedAmount" type="xsd:long" />
+				<xsd:element name="CriteriaMismatch" type="xsd:string"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
